@@ -84,6 +84,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="google-site-verification" content="K3amrIFK1A992vvDXlo9dFt3cnmgw66nPT2jsMks2es" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Hezron Jahmia | IT Specialist & Fullstack Software Engineer" />
         <meta property="og:description" content="IT specialist & Fullstack developer based in Kampala. Building digital systems using Flutter, React, Golang, and Kubernetes." />
