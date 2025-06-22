@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import "../styles/pages.scss";
+import "./../styles/pages.scss";
 import "../styles/components.scss";
 import PageNavButton from "@/components/pageNavigator";
 
