@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import "../styles/pages.scss";
 import "../styles/components.scss";
@@ -10,9 +10,14 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
+  weight: ["400", "600"],
   subsets: ["latin"],
 });
 
@@ -83,13 +88,9 @@ export default function RootLayout({
         <meta property="og:description" content="IT specialist & Fullstack developer based in Kampala. Building digital systems using Flutter, React, Golang, and Kubernetes." />
         <meta property="og:image" content="https://hezron-jahmia-presci.github.io/images/og-banner.jpg" />
         <meta property="og:url" content="https://hezron-jahmia-presci.github.io" />
-
-        <link
-          href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap"
-          rel="stylesheet"
-        />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${jetbrainsMono.variable}`}>
+
         {children}
         <PageNavButton />
       </body>
