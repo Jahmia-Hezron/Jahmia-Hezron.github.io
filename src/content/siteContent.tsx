@@ -20,7 +20,7 @@ export const siteContent = {
                 "I AM HEZRON JAHMIA PRESCI",
             body: [
                 {
-                    "p": "I’m an IT specialist and software engineer based in Kampala, Uganda. I work across the full stack, building applications and digital systems that address practical needs — from user-friendly interfaces to reliable backend services. My experience spans software development, teaching, and IT systems administration, which helps me balance technical solutions with user and organizational needs."
+                    "p": "I’m a software engineer and IT specialist based in Kampala, Uganda. I work across the full stack, building applications and digital systems that address practical needs — from user-friendly interfaces to reliable backend services. My experience spans software development, teaching, and IT systems administration, which helps me balance technical solutions with user and organizational needs."
                 },
                 {
                     "p": "My path in technology started with an interest in multimedia & design, logic and problem-solving. I began with multimedia & design and then transitioned to web development, then broadened into mobile apps, backend systems, and infrastructure management. Along the way, I’ve gained experience with Golang, Flutter, React, Docker, and Kubernetes, delivering a range of projects from client websites to internal tools."

@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://hezron-jahmia-presci.vercel.app/images/og-banner.jpg",
+        url: "/images/og-banner.jpg",
         width: 1200,
         height: 630,
         alt: "Hezron Jahmia Presci Portfolio Screenshot",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     description:
       "IT specialist & Fullstack developer based in Kampala. Building digital systems using Flutter, React, Golang, and Kubernetes.",
     creator: "@hezron_jahmia", // Use your real handle if you have one
-    images: ["https://hezron-jahmia-presci.vercel.app/images/og-banner.jpg"],
+    images: ["/images/og-banner.jpg"],
   },
 
   icons: {
