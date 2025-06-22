@@ -5,16 +5,8 @@ import "./../styles/pages.scss";
 import "../styles/components.scss";
 import PageNavButton from "@/components/pageNavigator";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
+const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
+const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
   weight: ["400", "600"],
@@ -23,14 +15,13 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "Hezron Jahmia Presci | IT Specialist & Software Engineer in Kampala",
+
   description:
     "I’m Hezron Jahmia, an IT specialist & fullstack software engineer based in Kampala, Uganda. I build clean, practical, and maintainable digital solutions using Flutter, Golang, React, Docker, and Kubernetes.",
+
   keywords: [
     "Hezron Jahmia",
     "Presci",
-    "Hezron Jahmia Presci",
-    "Hezron",
-    "hezy",
     "IT Specialist Uganda",
     "Software Engineer Kampala",
     "Fullstack Developer Uganda",
@@ -38,14 +29,12 @@ export const metadata: Metadata = {
     "Golang Developer",
     "React Developer",
     "Docker Kubernetes Engineer",
-    "Tech Portfolio",
-    "Ugandan Software Developer",
-    "Clean Code",
-    "Multimedia Designer Uganda",
   ],
+
   authors: [{ name: "Hezron Jahmia", url: "https://hezron-jahmia-presci.vercel.app/" }],
-  creator: "Hezron Jahmia",
-  publisher: "Hezron Jahmia",
+
+  creator: "Hezron Jahmia Presci",
+  publisher: "Hezron Jahmia Presci",
   metadataBase: new URL("https://hezron-jahmia-presci.vercel.app/"),
 
   openGraph: {
@@ -66,34 +55,28 @@ export const metadata: Metadata = {
     ],
   },
 
-  // twitter: {
-  //   card: "summary_large_image",
-  //   title: "Hezron Jahmia | Fullstack Software Engineer",
-  //   description:
-  //     "IT specialist & Fullstack developer based in Kampala. Building digital systems using Flutter, React, Golang, and Kubernetes.",
-  //   creator: "@hezron_jahmia", // Replace with actual handle if available
-  //   images: ["https://hezron-jahmia-presci.github.io/images/og-banner.jpg"],
-  // },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hezron Jahmia | Fullstack Software Engineer",
+    description:
+      "IT specialist & Fullstack developer based in Kampala. Building digital systems using Flutter, React, Golang, and Kubernetes.",
+    creator: "@hezron_jahmia", // Use your real handle if you have one
+    images: ["https://hezron-jahmia-presci.vercel.app/images/og-banner.jpg"],
+  },
+
+  icons: {
+    icon: "/favicon.ico",
+  },
+
+  verification: {
+    google: "K3amrIFK1A992vvDXlo9dFt3cnmgw66nPT2jsMks2es",
+  },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <head>
-        <meta name="google-site-verification" content="K3amrIFK1A992vvDXlo9dFt3cnmgw66nPT2jsMks2es" />
-        <link rel="icon" href="/favicon.ico" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Hezron Jahmia | IT Specialist & Fullstack Software Engineer" />
-        <meta property="og:description" content="IT specialist & Fullstack developer based in Kampala. Building digital systems using Flutter, React, Golang, and Kubernetes." />
-        <meta property="og:image" content="https://hezron-jahmia-presci.github.io/images/og-banner.jpg" />
-        <meta property="og:url" content="https://hezron-jahmia-presci.github.io" />
-      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} ${jetbrainsMono.variable}`}>
-
         {children}
         <PageNavButton />
       </body>
