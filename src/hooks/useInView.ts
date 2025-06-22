@@ -5,7 +5,8 @@ export const useInView = (threshold = 0.2) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    if (!ref.current) return;
+    const node = ref.current;
+    if (!node) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -14,12 +15,12 @@ export const useInView = (threshold = 0.2) => {
       { threshold }
     );
 
-    observer.observe(ref.current);
+    observer.observe(node);
 
     return () => {
-      if (ref.current) observer.unobserve(ref.current);
+      observer.unobserve(node);
     };
-  }, []);
+  }, [threshold]);
 
   return { ref, isVisible };
 };

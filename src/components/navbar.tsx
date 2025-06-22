@@ -8,7 +8,6 @@ import { siteContent } from '@/content/siteContent';
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
-    const pageOrder = ["/", "/about", "/tech-stack", "/works", "/clients", "/contact"];
 
 
     return (

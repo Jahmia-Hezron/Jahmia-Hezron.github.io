@@ -9,6 +9,8 @@ import lgZoom from "lightgallery/plugins/zoom";
 
 import { FaLink, FaSearchPlus } from "react-icons/fa";
 import Masonry from "react-masonry-css";
+import Image from "next/image";
+
 
 interface Project {
     title: string;
@@ -24,7 +26,8 @@ interface MasonryGalleryProps {
 }
 
 export default function MasonryGallery({ items }: MasonryGalleryProps) {
-    const lightbox = useRef<any>(null);
+    const lightbox = useRef<{ openGallery: (index: number) => void } | null>(null);
+
 
     return (
         <>
@@ -53,7 +56,15 @@ export default function MasonryGallery({ items }: MasonryGalleryProps) {
                             className="card"
                             onClick={() => lightbox.current?.openGallery(index)}
                         >
-                            <img src={item.thumb} alt={item.title} />
+                            <Image
+                                src={item.thumb}
+                                alt={item.title}
+                                width={300}          // adjust width & height as per your layout/design
+                                height={200}
+                                style={{ objectFit: "cover" }}
+                            />
+
+
 
 
                             <div className="overlay">

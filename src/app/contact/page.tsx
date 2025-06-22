@@ -4,7 +4,7 @@ import Banner from "@/components/banner";
 import PageContainer from "@/components/pageContainer";
 import { siteContent } from "@/content/siteContent";
 import { useAutoRouteScroll } from "@/hooks/useAutoRouteScroll";
-import { FaInstagram, FaGithub, FaLinkedin, FaBehance, FaWhatsapp } from "react-icons/fa";
+import { FaInstagram, FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 
 

@@ -1,7 +1,6 @@
 import { DiGo } from "react-icons/di";
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaDocker, FaGithub, FaWordpress, FaTrello } from "react-icons/fa6";
 import { SiTypescript, SiNextdotjs, SiFlutter, SiDart, SiPostman, SiMysql, SiClickup, SiAdobecreativecloud } from "react-icons/si";
-import { WiHorizon } from "react-icons/wi";
 
 export const siteContent = {
     home: {

@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import styles from '@/styles/ClientsCruipTicker.module.scss';
+
 
 interface ClientsCruipTickerProps {
     logos: string[];

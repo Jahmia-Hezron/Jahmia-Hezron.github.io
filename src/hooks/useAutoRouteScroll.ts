@@ -1,8 +1,6 @@
-// hooks/useAutoRouteScroll.ts
-
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useCallback } from "react";
 import { usePathname, useRouter } from "next/navigation";
 
 export function useAutoRouteScroll(pages: string[]) {
@@ -12,35 +10,41 @@ export function useAutoRouteScroll(pages: string[]) {
 
   const currentIndex = pages.indexOf(pathname);
 
-  const goToPage = (index: number) => {
-    if (index >= 0 && index < pages.length) {
-      router.push(pages[index]);
-    }
-  };
+  const goToPage = useCallback(
+    (index: number) => {
+      if (index >= 0 && index < pages.length) {
+        router.push(pages[index]);
+      }
+    },
+    [pages, router]
+  );
 
-  const handleNavigation = (direction: "next" | "prev") => {
-    if (isThrottled.current) return;
+  const handleNavigation = useCallback(
+    (direction: "next" | "prev") => {
+      if (isThrottled.current) return;
 
-    const nextIndex = direction === "next" ? currentIndex + 1 : currentIndex - 1;
-    goToPage(nextIndex);
+      const nextIndex = direction === "next" ? currentIndex + 1 : currentIndex - 1;
+      goToPage(nextIndex);
 
-    isThrottled.current = true;
-    setTimeout(() => {
-      isThrottled.current = false;
-    }, 1000); // throttle
-  };
+      isThrottled.current = true;
+      setTimeout(() => {
+        isThrottled.current = false;
+      }, 1000);
+    },
+    [currentIndex, goToPage]
+  );
 
-  const goToNext = () => handleNavigation("next");
-  const goToPrev = () => handleNavigation("prev");
+  const goToNext = useCallback(() => handleNavigation("next"), [handleNavigation]);
+  const goToPrev = useCallback(() => handleNavigation("prev"), [handleNavigation]);
 
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
       if (Math.abs(e.deltaY) < 50) return; // minor scroll ignored
-    
+
       const scrollTop = window.scrollY;
       const scrollHeight = document.documentElement.scrollHeight;
       const clientHeight = window.innerHeight;
-    
+
       // Scrolling down at bottom -> next page
       if (e.deltaY > 0 && scrollTop + clientHeight >= scrollHeight - 1) {
         handleNavigation("next");
@@ -49,7 +53,7 @@ export function useAutoRouteScroll(pages: string[]) {
       else if (e.deltaY < 0 && scrollTop <= 1) {
         handleNavigation("prev");
       }
-    };    
+    };
 
     const handleKeyDown = (e: KeyboardEvent) => {
       if (["ArrowDown", "PageDown"].includes(e.key)) {
@@ -68,7 +72,7 @@ export function useAutoRouteScroll(pages: string[]) {
       window.removeEventListener("wheel", handleWheel);
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [currentIndex, pages]);
+  }, [handleNavigation]);
 
   return { goToNext, goToPrev };
 }

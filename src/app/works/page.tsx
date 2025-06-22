@@ -10,16 +10,6 @@ import { useAutoRouteScroll } from "@/hooks/useAutoRouteScroll";
 const pageOrder = ["/", "/about", "/tech-stack", "/works", "/clients", "/contact"];
 
 export default function WorksPage() {
-    const projectImages = siteContent.projects.hero.array.map((project) => ({
-        src: project.image2x,
-        alt: project.title,
-        width: 1000,
-        height: 800,
-        title: project.title,
-        caption: project.caption,
-        link: project.link,
-    }));
-
 
     useAutoRouteScroll(pageOrder);
 
