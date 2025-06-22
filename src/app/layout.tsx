@@ -4,6 +4,10 @@ import "./globals.css";
 import "./../styles/pages.scss";
 import "../styles/components.scss";
 import PageNavButton from "@/components/pageNavigator";
+import { useAutoRouteScroll } from "@/hooks/useAutoRouteScroll";
+
+const pageOrder = ["/", "/about", "/tech-stack", "/works", "/clients", "/contact"];
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -81,10 +85,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  useAutoRouteScroll(pageOrder);
   return (
     <html lang="en">
       <head>
         <meta name="google-site-verification" content="K3amrIFK1A992vvDXlo9dFt3cnmgw66nPT2jsMks2es" />
+        <link rel="icon" href="/favicon.ico" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Hezron Jahmia | IT Specialist & Fullstack Software Engineer" />
         <meta property="og:description" content="IT specialist & Fullstack developer based in Kampala. Building digital systems using Flutter, React, Golang, and Kubernetes." />

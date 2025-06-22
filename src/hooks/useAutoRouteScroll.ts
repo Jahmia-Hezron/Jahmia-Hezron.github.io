@@ -3,25 +3,25 @@
 import { useEffect, useRef, useCallback } from "react";
 import { usePathname, useRouter } from "next/navigation";
 
-export function useAutoRouteScroll(pages: string[]) {
+export function useAutoRouteScroll(pageOrder: string[]) {
   const router = useRouter();
   const pathname = usePathname();
   const isThrottled = useRef(false);
 
-  const currentIndex = pages.indexOf(pathname);
+  const currentIndex = pageOrder.indexOf(pathname);
 
   const goToPage = useCallback(
     (index: number) => {
-      if (index >= 0 && index < pages.length) {
-        router.push(pages[index]);
+      if (index >= 0 && index < pageOrder.length) {
+        router.push(pageOrder[index]);
       }
     },
-    [pages, router]
+    [pageOrder, router]
   );
 
   const handleNavigation = useCallback(
     (direction: "next" | "prev") => {
-      if (isThrottled.current) return;
+      if (isThrottled.current || currentIndex === -1) return;
 
       const nextIndex = direction === "next" ? currentIndex + 1 : currentIndex - 1;
       goToPage(nextIndex);
@@ -29,7 +29,7 @@ export function useAutoRouteScroll(pages: string[]) {
       isThrottled.current = true;
       setTimeout(() => {
         isThrottled.current = false;
-      }, 1000);
+      }, 1000); // throttle scrolls for 1 second
     },
     [currentIndex, goToPage]
   );
@@ -39,17 +39,17 @@ export function useAutoRouteScroll(pages: string[]) {
 
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
-      if (Math.abs(e.deltaY) < 50) return; // minor scroll ignored
+      if (Math.abs(e.deltaY) < 50) return;
 
       const scrollTop = window.scrollY;
       const scrollHeight = document.documentElement.scrollHeight;
       const clientHeight = window.innerHeight;
 
-      // Scrolling down at bottom -> next page
+      // Scroll down at bottom
       if (e.deltaY > 0 && scrollTop + clientHeight >= scrollHeight - 1) {
         handleNavigation("next");
       }
-      // Scrolling up at top -> previous page
+      // Scroll up at top
       else if (e.deltaY < 0 && scrollTop <= 1) {
         handleNavigation("prev");
       }
