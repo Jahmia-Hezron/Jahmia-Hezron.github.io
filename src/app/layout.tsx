@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     "Presci",
     "Hezron Jahmia Presci",
     "Hezron",
+    "hezy",
     "IT Specialist Uganda",
     "Software Engineer Kampala",
     "Fullstack Developer Uganda",
@@ -42,22 +43,22 @@ export const metadata: Metadata = {
     "Clean Code",
     "Multimedia Designer Uganda",
   ],
-  authors: [{ name: "Hezron Jahmia", url: "https://hezron-jahmia-presci.github.io/" }],
+  authors: [{ name: "Hezron Jahmia", url: "https://hezron-jahmia-presci.vercel.app/" }],
   creator: "Hezron Jahmia",
   publisher: "Hezron Jahmia",
-  metadataBase: new URL("https://hezron-jahmia-presci.github.io/"),
+  metadataBase: new URL("https://hezron-jahmia-presci.vercel.app/"),
 
   openGraph: {
     title: "Hezron Jahmia | Software Engineer & IT Specialist",
     description:
       "Explore the work of Hezron Jahmia, an IT Specialist & fullstack software engineer from Kampala specializing in Flutter, React, Golang, and scalable backend systems.",
-    url: "https://hezron-jahmia-presci.github.io/",
+    url: "https://hezron-jahmia-presci.vercel.app/",
     siteName: "Hezron Jahmia Portfolio",
     locale: "en_UG",
     type: "website",
     images: [
       {
-        url: "https://hezron-jahmia-presci.github.io/images/og-banner.jpg",
+        url: "https://hezron-jahmia-presci.vercel.app/images/og-banner.jpg",
         width: 1200,
         height: 630,
         alt: "Hezron Jahmia Presci Portfolio Screenshot",

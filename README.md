@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# 🌐 Jahmia Hezron – Personal Portfolio
 
-First, run the development server:
+This is my personal developer portfolio website, built using [Next.js](https://nextjs.org/) and deployed on [Vercel](https://vercel.com/). It showcases my skills, experience, recent projects, and professional background as a fullstack developer.
+
+## 🚀 Live Demo
+
+🔗 [Visit Portfolio](https://hezron-jahmia-presci.vercel.app)
+
+## 🛠️ Tech Stack
+
+- **Frontend:** Next.js, TypeScript, React
+- **Styling:** SCSS Modules / CSS
+- **Animations:** Framer Motion
+- **Deployment:** Vercel
+- **Version Control:** Git & GitHub
+
+## 📂 Folder Structure
+
+```
+.
+├── public/            # Static assets
+├── pages/             # Next.js pages
+├── components/        # Reusable UI components
+├── styles/            # SCSS or CSS modules
+├── utils/             # Utility functions (if any)
+└── README.md
+```
+
+## 📸 Features
+
+- Responsive, mobile-friendly design
+- Animated page transitions with Framer Motion
+- Projects showcase with links and categories
+- Smooth scroll and accessible navigation
+- SEO optimized for search engine indexing
+
+## 🚧 Setup and Development
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Hezron-Jahmia-Presci/hezron-jahmia-presci.git
+cd your-repo-name
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+# or
+yarn install
+```
+
+### 3. Run the Development Server
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+## 🌍 Deployment
 
-To learn more about Next.js, take a look at the following resources:
+This project is automatically deployed to [Vercel](https://vercel.com/) on every push to the `main` branch. For custom domain setup, refer to the Vercel dashboard.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📧 Contact
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Feel free to reach out via:
 
-## Deploy on Vercel
+- Email: [hezron.p.jahmia@gmail.com](mailto:hezron.p.jahmia@gmail.com)
+- LinkedIn: [https://linkedin.com/in/hezron-jahmia-01a165371/](https://linkedin.com/in/hezron-jahmia-01a165371/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+© 2025 Jahmia Hezron. All rights reserved.
