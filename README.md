@@ -1,96 +1,36 @@
-# Jahmia Hezron – Developer Portfolio
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-This is my personal developer portfolio, built using **React** and **TypeScript**, and styled with **SCSS**. It showcases my background, tech stack, projects, and professional journey as a software engineer based in Kampala, Uganda.
+## Getting Started
 
-🔗 **Live Demo:** [(https://github.com/Jahmia-Hezron/jahmiahezron.github.io)]
-
----
-
-## 🔧 Tech Stack
-
-- **Frontend:** React + TypeScript
-- **Styling:** SCSS
-- **Routing:** React Router
-- **Deployment:** GitHub Pages
-
----
-
-## 📁 Project Structure
-
-```
-src/
-├── components/       # Reusable UI components (e.g., nav-bar)
-├── pages/            # Main sections (Home, About, Projects, etc.)
-├── styles/           # Global and component-specific SCSS files
-├── assets/           # Fonts, images, and other media
-└── index.tsx         # Entry point
-```
-
----
-
-## 🚀 Getting Started
-
-To run the project locally:
+First, run the development server:
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
-npm install
-npm start
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-Then open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
----
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## 📦 Scripts
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-- `npm start` – Run the app in development mode
-- `npm run build` – Build the app for production
-- `npm run deploy` – Deploy the app to GitHub Pages (if set up)
+## Learn More
 
----
+To learn more about Next.js, take a look at the following resources:
 
-## 🌍 Deployment (GitHub Pages)
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-To deploy your site using **GitHub Pages**:
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-1. Add this to your `package.json`:
-   ```json
-   "homepage": "https://your-username.github.io/your-repo-name"
-   ```
+## Deploy on Vercel
 
-2. Install the `gh-pages` package:
-   ```bash
-   npm install gh-pages --save-dev
-   ```
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-3. Add these scripts to your `package.json`:
-   ```json
-   "scripts": {
-     "predeploy": "npm run build",
-     "deploy": "gh-pages -d build"
-   }
-   ```
-
-4. Deploy your site:
-   ```bash
-   npm run deploy
-   ```
-
----
-
-## 📖 About Me
-
-I’m Jahmia Hezron, a full-stack software engineer passionate about building digital solutions that make a real-world impact — from web apps to mental health tools like the Digital Depression Diagnosis System (DDS).
-
----
-
-## 📬 Contact
-
-- Portfolio: [your-portfolio-link]
-- LinkedIn: [your-linkedin]
-- GitHub: [https://github.com/Jahmia-Hezron]
-
----
-
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

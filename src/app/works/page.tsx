@@ -1,0 +1,51 @@
+"use client";
+
+import Banner from "@/components/banner";
+import MasonryGallery from "@/components/mansoryGallery";
+import PageContainer from "@/components/pageContainer";
+import { siteContent } from "@/content/siteContent";
+import { useAutoRouteScroll } from "@/hooks/useAutoRouteScroll";
+
+
+const pageOrder = ["/", "/about", "/tech-stack", "/works", "/clients", "/contact"];
+
+export default function WorksPage() {
+    const projectImages = siteContent.projects.hero.array.map((project) => ({
+        src: project.image2x,
+        alt: project.title,
+        width: 1000,
+        height: 800,
+        title: project.title,
+        caption: project.caption,
+        link: project.link,
+    }));
+
+
+    useAutoRouteScroll(pageOrder);
+
+    return (
+        <main className="works">
+            <Banner>
+                <PageContainer>
+                    <section className="s-1">
+                        <h4>{siteContent.projects.hero.title}</h4>
+                        <div className="sensor"><h1>{siteContent.projects.hero.heading}</h1></div>
+                    </section>
+                </PageContainer>
+
+                <PageContainer>
+                    <section className="s-1 final">
+                        <MasonryGallery
+                            items={siteContent.projects.hero.array.map(project => ({
+                                ...project,
+                                thumb: project.image,
+                                full: project.image2x
+                            }))}
+                        />
+                    </section>
+                </PageContainer>
+
+            </Banner>
+        </main>
+    );
+}

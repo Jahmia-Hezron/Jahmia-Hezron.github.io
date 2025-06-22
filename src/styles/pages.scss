@@ -1,172 +1,177 @@
-.HomePage, 
-.AboutPage, 
-.ProjectsPage, 
-.TechStackPage, 
-.ExperiencePage {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  background-color: #F4F4F7;
-  position: relative;
-  padding-right: 10%;
-  padding-left: 10%;
-  min-height: 80vh;
-  border-radius: 0.5rem;
-  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.2);
-  position: relative;
-  z-index: 1;
-  transition: all 0.4s ease;
+.final {
+  margin-bottom: 8rem;
 }
 
-.ContactPage, 
-.ProjectsPage, 
-.TechStackPage {
-  .Content {
-    justify-content: center;
-    width: 100%;
-    
-    .Text {
-      width: 100%;
-      align-items: center;
-      margin: 5rem 0;
+.home,
+  .about,
+  .tech-stack,
+  .works, 
+  .clients, 
+  .contact {
+    h1 {
+      font-size: 3rem;
     }
   }
-}
-.ProjectsPage, 
-.TechStackPage {
-  .Content {
-    justify-content: space-around;
+
+.home {
+  .s-0,
+  .s-1,
+  .s-2 {
+    align-items: flex-start;
   }
 
+  h1 {
+    
+    min-width: 23rem;
+    text-align: left;
+  }
+
+  .image {
+    padding: 4rem;
+    width: 65%;
+    height: 30rem;
+    background-image: url(/images/profile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+    border: 0.1rem solid var(--foreground);
+    border-radius: 0.2rem;
+
+  }
+  
+  .contents {
+    gap: 2rem;
+  }
+
+  .s-2 {
+    justify-content: space-evenly;
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    right: 5.4rem;
+    -webkit-transform: translate3d(0, -50%, 0);
+    -ms-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+  }
 }
-.HomePage {
-  .Text {
-    padding-top: 8rem;
-    .CtaButtons {
-      display: flex;
-      justify-content: space-between;
-      align-items: stretch;
-      padding: 2rem 0;
-      width: 100%;
+
+.about {
+  .banner-container {
+      background: var(--tertiary);  
       
-      .ViewMyWork {
-        border: #00D4FF solid 0.2rem !important;
-        background-color: transparent;
-        color: #00D4FF;
+      .banner-overlay {
+        background: #000000a7;
+      }
+  }
+  h1{
+    margin-bottom: 3rem;
+  }
+
+  .s-0 {
+    gap: 8rem;
+
+    .stat-box {
+      text-align: center;
+      font-size: 5rem;
+      font-weight: 600;
+      color: var(--foreground);
+      overflow: hidden !important;
+  
+      p {
+        margin-top: 0.5rem;
+        font-size: 1.5rem;
       }
     }
   }
-  .Image {
-    align-items: flex-end !important;
-  }
-}
-
-.AboutPage {
-padding-top: 4rem;
-  background-color: #E0E0E0;
-  
-  .Image {
-    width: 45%;
-
-    img {
-      border: solid 0.08rem transparent;
-      border-radius: 0.8rem;
-      box-shadow: #2121216f  0.1rem 0.5rem 0.6rem;
-    }
-  }
-
-  .Text {
-    width: 50%;
-    justify-content: start;
-    margin: 0 !important;
-
-  }
-}
-
-.ProjectsPage {
-  .ViewMyWork {
-    margin-top: 1rem;
-    border: #00D4FF solid 0.2rem !important;
-    background-color: transparent;
-    color: #00D4FF;
-  }
-  
-  .Image {
-    img {
-      height: inherit;
-    }
-  }
-}
-
-.ExperiencePage {
-  padding-top: 4rem;
-  .Text {
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
-.TechStackPage {
-  .Title {
-    color: #00D4FF;
-  }
-  
-  .Header {
-    font-weight: bold;
-  }
-}
-.Content, 
-.Image, 
-.Text {
-  display: inherit;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
- 
-}
-
-.Image, 
-.Text {
-  justify-content: center;
-}
-
-
-.Text {
-  flex-direction: column;
-  align-items: baseline;
-  width: 40%;
-  height: auto;
-}
-
-.Image {
-  object-fit: cover;
-  width:60%;    
-}
-
-.Links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-
-  a {
-    display:  inherit;
-    width: 15%;
-  }
-
-  .Image {
-    width: 100% !important;
-  }
-
-}
-@media (max-width: 1080px) {
-  .AboutPage, 
-  .HomePage{
     
-    .Text, 
-    .Image {
-      width: 100% !important;
+}
+
+.tech-stack {
+  .banner-container {
+    background-image: url(/images/banner_4.jpg);
+
+    .banner-overlay {
+      background: #000000cd;
+    }
+  }
+
+  .s-0 {
+    margin-bottom: 1rem;
+    justify-content: flex-start;
+
+  }
+  h3 {
+    
+    background: var(--tertiary);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border-left: 4px solid var(--foreground);
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    list-style: none;
+    display: inherit;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    flex-wrap: wrap;
+    border: dashed 0.1rem var(--foreground);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    min-width: 18rem;
+    transition: background 0.5s ease, color 0.5s ease; 
+
+      &:hover {
+        color: var(--tertiary);
+        background: var(--foreground);
+
+        .stack-icon {
+          color: var(--tertiary);
+        }
+      }
+
+    li {
+      padding:  0 1rem;
+      align-items: center;
+
+      .stack-icon {
+        font-size: 3rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
+.clients {
+  .banner-container {
+    background-image: url(/images/banner_3.jpg);
+    
+    .banner-overlay {
+      background: #675252be;
+    }
+  }
+
+  .sensor {
+    padding: 0 8rem;
+    margin-bottom: 5rem;
+    background: var(--background);
+  }
+}
+
+.contact {
+  .s-0 {
+    .icon-bubble {
+      width: 3.8rem;
+      height: 3.8rem;
+  
+      .contact-icon {
+        font-size: 2rem;
+      }
     }
   }
 }
