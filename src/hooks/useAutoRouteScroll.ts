@@ -3,20 +3,20 @@
 import { useEffect, useRef, useCallback } from "react";
 import { usePathname, useRouter } from "next/navigation";
 
-export function useAutoRouteScroll(pageOrder: string[]) {
+export function useAutoRouteScroll(pages: string[]) {
   const router = useRouter();
-  const pathname = usePathname();
+  const rawPathname = usePathname();
+  const pathname = rawPathname?.replace(/\/$/, "") || "/";
   const isThrottled = useRef(false);
 
-  const currentIndex = pageOrder.indexOf(pathname);
-
+  const currentIndex = pages.indexOf(pathname);
   const goToPage = useCallback(
     (index: number) => {
-      if (index >= 0 && index < pageOrder.length) {
-        router.push(pageOrder[index]);
+      if (index >= 0 && index < pages.length) {
+        router.push(pages[index]);
       }
     },
-    [pageOrder, router]
+    [pages, router]
   );
 
   const handleNavigation = useCallback(
@@ -29,7 +29,7 @@ export function useAutoRouteScroll(pageOrder: string[]) {
       isThrottled.current = true;
       setTimeout(() => {
         isThrottled.current = false;
-      }, 1000); // throttle scrolls for 1 second
+      }, 1000);
     },
     [currentIndex, goToPage]
   );
@@ -45,12 +45,9 @@ export function useAutoRouteScroll(pageOrder: string[]) {
       const scrollHeight = document.documentElement.scrollHeight;
       const clientHeight = window.innerHeight;
 
-      // Scroll down at bottom
       if (e.deltaY > 0 && scrollTop + clientHeight >= scrollHeight - 1) {
         handleNavigation("next");
-      }
-      // Scroll up at top
-      else if (e.deltaY < 0 && scrollTop <= 1) {
+      } else if (e.deltaY < 0 && scrollTop <= 1) {
         handleNavigation("prev");
       }
     };

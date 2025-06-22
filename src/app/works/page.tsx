@@ -6,7 +6,6 @@ import PageContainer from "@/components/pageContainer";
 import { siteContent } from "@/content/siteContent";
 import { useAutoRouteScroll } from "@/hooks/useAutoRouteScroll";
 
-
 const pageOrder = ["/", "/about", "/tech-stack", "/works", "/clients", "/contact"];
 
 export default function WorksPage() {

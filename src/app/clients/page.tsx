@@ -9,7 +9,6 @@ import { useAutoRouteScroll } from "@/hooks/useAutoRouteScroll";
 
 const pageOrder = ["/", "/about", "/tech-stack", "/works", "/clients", "/contact"];
 
-
 export default function ClientPage() {
     useAutoRouteScroll(pageOrder);
     return (

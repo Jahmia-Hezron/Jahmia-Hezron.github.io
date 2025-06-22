@@ -6,7 +6,6 @@ import { siteContent } from "@/content/siteContent";
 import { useAutoRouteScroll } from "@/hooks/useAutoRouteScroll";
 import CountUp from "react-countup";
 
-
 const pageOrder = ["/", "/about", "/tech-stack", "/works", "/clients", "/contact"];
 
 export default function AboutPage() {
