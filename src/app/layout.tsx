@@ -4,10 +4,6 @@ import "./globals.css";
 import "./../styles/pages.scss";
 import "../styles/components.scss";
 import PageNavButton from "@/components/pageNavigator";
-import { useAutoRouteScroll } from "@/hooks/useAutoRouteScroll";
-
-const pageOrder = ["/", "/about", "/tech-stack", "/works", "/clients", "/contact"];
-
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -85,7 +81,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  useAutoRouteScroll(pageOrder);
   return (
     <html lang="en">
       <head>
