@@ -20,9 +20,7 @@ export default function ContactPage() {
                         <h4>{siteContent.contact.hero.title}</h4>
                         <h1>{siteContent.contact.hero.heading}</h1>
                     </section>
-                </PageContainer>
 
-                <PageContainer>
                     <section className="s-0">
                         <a
                             href={siteContent.contact.links.email}

@@ -20,15 +20,11 @@ export default function ClientPage() {
                         <h4>{siteContent.clients.hero.title}</h4>
                         <div className="sensor"><h1>{siteContent.clients.hero.heading}</h1></div>
                     </section>
-                </PageContainer>
 
-                <PageContainer>
                     <section className="s-0">
                         <ClientsTickerCarousel logos={siteContent.clients.hero.logos.map((logo: { image: string }) => logo.image)} />
                     </section>
-                </PageContainer>
 
-                <PageContainer>
                     <section className="s-0 final">
                         {siteContent.clients.hero.array.map((testimonial, index) => (
                             <TestimonialCard

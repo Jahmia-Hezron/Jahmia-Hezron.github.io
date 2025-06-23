@@ -17,10 +17,7 @@ export default function TechStackPage() {
                         <h4>{siteContent.techStack.hero.title}</h4>
                         <h1>{siteContent.techStack.hero.heading}</h1>
                     </section>
-                </PageContainer>
 
-
-                <PageContainer>
                     <section className="s-0 final">
                         {Object.entries(siteContent.techStack.hero.array).map(([key, value]) => (
                             <div className="s-1" key={key}>

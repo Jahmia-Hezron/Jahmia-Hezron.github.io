@@ -18,11 +18,9 @@ export default function WorksPage() {
                 <PageContainer>
                     <section className="s-1">
                         <h4>{siteContent.projects.hero.title}</h4>
-                        <div className="sensor"><h1>{siteContent.projects.hero.heading}</h1></div>
+                        <h1>{siteContent.projects.hero.heading}</h1>
                     </section>
-                </PageContainer>
 
-                <PageContainer>
                     <section className="s-1 final">
                         <MasonryGallery
                             items={siteContent.projects.hero.array.map(project => ({
@@ -33,7 +31,6 @@ export default function WorksPage() {
                         />
                     </section>
                 </PageContainer>
-
             </Banner>
         </main>
     );

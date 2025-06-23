@@ -21,9 +21,7 @@ export default function AboutPage() {
                             <p key={key}>{value.p}</p>
                         ))}
                     </section>
-                </PageContainer>
 
-                <PageContainer>
                     <section className="s-0 final">
                         <div className="stat-box">
                             <CountUp end={198} duration={3} />
