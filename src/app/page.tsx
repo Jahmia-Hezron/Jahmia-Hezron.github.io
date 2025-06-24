@@ -5,7 +5,7 @@ import Button from "@/components/button";
 import PageContainer from "@/components/pageContainer";
 import { siteContent } from "@/content/siteContent";
 import { useAutoRouteScroll } from "@/hooks/useAutoRouteScroll";
-import { FaInstagram, FaGithub, FaLinkedin, FaBehance, FaTwitter } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaBehance, FaTwitter } from "react-icons/fa";
 
 const pageOrder = ["/", "/about", "/tech-stack", "/works", "/clients", "/contact"];
 
