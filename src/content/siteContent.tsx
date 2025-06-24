@@ -270,6 +270,7 @@ export const siteContent = {
             behance: "https://www.behance.net/JahmiaHezron",
             email: "mailto:hezron.p.jahmia@gmail.com",
             whatsapp: "https://wa.me/256752580722",
+            twitter: "https://x.com/HJahmia"
         }
     }
 };

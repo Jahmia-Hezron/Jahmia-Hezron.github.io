@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     title: "Hezron Jahmia | Fullstack Software Engineer",
     description:
       "IT specialist & Fullstack developer based in Kampala. Building digital systems using Flutter, React, Golang, and Kubernetes.",
-    creator: "@hezron_jahmia",
+    creator: "@HJahmia",
     images: ["https://hezron-jahmia-presci.vercel.app/images/og-banner.jpg"],
   },
 

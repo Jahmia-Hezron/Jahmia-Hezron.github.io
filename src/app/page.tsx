@@ -5,7 +5,7 @@ import Button from "@/components/button";
 import PageContainer from "@/components/pageContainer";
 import { siteContent } from "@/content/siteContent";
 import { useAutoRouteScroll } from "@/hooks/useAutoRouteScroll";
-import { FaInstagram, FaGithub, FaLinkedin, FaBehance } from "react-icons/fa";
+import { FaInstagram, FaGithub, FaLinkedin, FaBehance, FaTwitter } from "react-icons/fa";
 
 const pageOrder = ["/", "/about", "/tech-stack", "/works", "/clients", "/contact"];
 
@@ -51,13 +51,13 @@ export default function Home() {
 					</a>
 
 					<a
-						href={siteContent.contact.links.gitHub}
+						href={siteContent.contact.links.twitter}
 						className="icon-bubble"
 						target="_blank"
 						rel="noopener noreferrer"
-						title="GitHub"
+						title="Twitter"
 					>
-						<FaGithub className="contact-icon" />
+						<FaTwitter className="contact-icon" />
 					</a>
 
 					<a
