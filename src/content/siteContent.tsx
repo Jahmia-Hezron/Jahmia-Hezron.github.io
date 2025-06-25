@@ -264,7 +264,7 @@ export const siteContent = {
                 "Reach out for a new project or just say hello",
         },
         links: {
-            inkedin: "https://www.linkedin.com/in/hezron-jahmia-01a165371/",
+            inkedin: "https://www.linkedin.com/in/hezron-jahmia/",
             gitHub: "https://github.com/Hezron-Jahmia-Presci",
             instagram: "https://www.instagram.com/hezron_jahmia/",
             behance: "https://www.behance.net/JahmiaHezron",

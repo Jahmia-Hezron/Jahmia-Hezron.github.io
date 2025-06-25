@@ -100,9 +100,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               name: "Hezron Jahmia Presci",
               url: "https://hezron-jahmia-presci.vercel.app",
               jobTitle: "Software Engineer & IT Specialist",
+              description: "Hezron Jahmia Presci is a Software Engineer and IT Specialist based in Kampala, Uganda, specializing in Flutter, React, Golang, and scalable backend systems.",
+              image: "https://hezron-jahmia-presci.vercel.app/images/og-banner.jpg",
+
               sameAs: [
                 "https://github.com/Hezron-Jahmia-Presci",
-                "https://www.linkedin.com/in/hezron-jahmia-01a165371/",
+                "https://www.linkedin.com/in/hezron-jahmia/",
+                "https://x.com/HJahmia",
               ],
             }),
           }}
