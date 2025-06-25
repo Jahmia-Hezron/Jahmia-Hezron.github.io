@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://hezron-jahmia-presci.vercel.app
+
+# Sitemaps
+Sitemap: https://hezron-jahmia-presci.vercel.app/sitemap.xml
