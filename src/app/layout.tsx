@@ -99,11 +99,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "@type": "Person",
               name: "Hezron Jahmia Presci",
               url: "https://hezron-jahmia-presci.vercel.app",
-              jobTitle: "Software Engineer",
-              // worksFor: {
-              //   "@type": "Organization",
-              //   name: "Freelance",
-              // },
+              jobTitle: "Software Engineer & IT Specialist",
               sameAs: [
                 "https://github.com/Hezron-Jahmia-Presci",
                 "https://www.linkedin.com/in/hezron-jahmia-01a165371/",

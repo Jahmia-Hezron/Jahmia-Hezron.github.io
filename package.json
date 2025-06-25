@@ -1,5 +1,5 @@
 {
-  "name": "hezron-jahmia-presci.github.io",
+  "name": "hezron-jahmia-presci",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d out"
+    "deploy": "gh-pages -d out",
+    "postbuild": "next-sitemap"
+
   },
   "dependencies": {
     "aos": "^2.3.4",
@@ -18,6 +20,7 @@
     "lg-zoom": "^1.3.0",
     "lightgallery": "^2.9.0-beta.1",
     "next": "^15.3.4",
+    "next-sitemap": "^4.2.3",
     "react": "^19.0.0",
     "react-countup": "^6.5.3",
     "react-dom": "^19.0.0",
