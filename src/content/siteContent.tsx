@@ -144,7 +144,7 @@ export const siteContent = {
                     image: "/images/projects/lexway_advisory1.png",
                     image2x: "/images/projects/lexway_advisory.jpg",
                     caption: "I built Lexway Advisory to help individuals, entrepreneurs, and institutions handle legal and business processes with ease. From land transactions to business registration, my goal was to simplify complex workflows by offering clear, professional, and efficient tools. Based in Uganda and designed with both local and international users in mind, Lexway is grounded in integrity, innovation, and a deep understanding of the legal environment.",
-                    link: "https://lilahaven.zaantu.com",
+                    link: "https://www.lexway-advisory.com/",
                 },
                 {
                     title: "Cozy Interiors UG",
